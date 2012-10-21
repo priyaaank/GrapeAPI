@@ -8,4 +8,8 @@ class User
   field :username, :type => String
   
   embeds_one :contact_info
+
+  def formatted_name
+    [first_name, last_name].join(" ")
+  end
 end
